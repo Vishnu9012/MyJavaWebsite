@@ -1,0 +1,736 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>STRING </h2></center>
+        <br><br>
+       <br><br>
+<b>1. Program to Check if a String contains only digits? </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        // Java program for the above approach 
+        // contains only digits 
+        class string1 { 
+        
+            // Function to check if a string 
+            // contains only digits 
+            public static boolean
+            onlyDigits(String str, int n) 
+            { 
+                // Traverse the string from 
+                // start to end 
+                for (int i = 0; i < n; i++) { 
+        
+                    // Check if character is 
+                    // not a digit between 0-9 
+                    // then return false
+                    if (str.charAt(i) < '0'
+                        || str.charAt(i) > '9') { 
+                        return false; 
+                    } 
+                } 
+                // If we reach here, that means 
+                // all characters were digits.
+                return true; 
+            } 
+        
+            // Driver Code 
+            public static void main(String args[]) 
+            { 
+                // Given string str 
+                String str = "1a234"; 
+                int len = str.length(); 
+        
+                // Function Call 
+                System.out.println(onlyDigits(str, len)); 
+            } 
+        }
+        
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Strings/7017String1.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>2. Program to perform Deep Copy for String?</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class String2 
+        {  
+        // instance variable of the class ABC  
+        int x = 30;  
+        }  
+        class DeepCopyExample   
+        {     
+        // main method  
+        public static void main(String argvs[])   
+        {  
+        // creating an object of the class ABC  
+        
+        
+        String2 obj1 = new String2();  
+          
+        // it will copy the reference, not value  
+        String2 obj2 = new String2();  
+          
+        // updating the value to 6   
+        // using the reference variable obj2  
+        obj2.x = 6;  
+          
+        // printing the value of x using reference variable obj1   
+        System.out.println("The value of x is: " + obj1.x);  
+        }  
+        
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Strings/7017String2.png" alt="">  </p>
+
+<br><br>
+<br><br>
+<b>3. Program to prove String is immutable programmatically?</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class E {  
+            public static void check(Object x, Object y) {  
+                if (x == y) {  
+                    System.out.println("Both pointing to the same reference");  
+                } 
+                else {  
+                    System.out.println("Both are pointing to different reference");  
+                }  
+            }  
+            public static void main(String[] args) {  
+                String x = "hello";  
+                String y = "hello";  
+                System.out.println("Before Modification");  
+                check(x, y);  
+                System.out.println("--------------------");
+                x += "world";  
+                System.out.println("After Modification");  
+                check(x, y);  
+            }  
+        }  
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  <img class="P-OUTPUT" src="./javapro/String/7105_Strings_3.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>4. Program to remove all occurrences of a given character from input String?</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+
+        class RemoveCharacter {
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                
+                System.out.print("Enter a string: ");
+                String inputString = scanner.nextLine();
+                
+                System.out.print("Enter the character to remove: ");
+                char charToRemove = scanner.next().charAt(0);
+                
+                String result = removeCharacter(inputString, charToRemove);
+                System.out.println("Result: " + result);
+                
+                scanner.close();
+            }
+            
+            public static String removeCharacter(String inputString, char charToRemove) {
+                StringBuilder stringBuilder = new StringBuilder();
+                
+                for (int i = 0; i < inputString.length(); i++) {
+                    char currentChar = inputString.charAt(i);
+                    
+                    if (currentChar != charToRemove) {
+                        stringBuilder.append(currentChar);
+                    }
+                }
+                
+                return stringBuilder.toString();
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  </p> <img class="P-OUTPUT" src="./javapro/Strings/7023String4.png" alt="">  
+<br><br>
+<br><br>
+<b>5. Program to append the string using StringBuffer class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.lang.*; 
+        class s { 
+        
+            public static void main(String[] args) 
+            { 
+        
+                StringBuffer s1 = new StringBuffer("Yaman "); 
+                System.out.println("Input: " + s1); 
+        
+                s1.append(true); 
+                System.out.println("Output: " + s1); 
+        
+                System.out.println(); 
+        
+                StringBuffer s2 = new StringBuffer("Sahota"); 
+                System.out.println("Input: " + s2); 
+        
+                s2.append(false); 
+                System.out.println("Output: " + s2); 
+            } 
+        } 
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Strings/7038String5.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>6. Program to insert the string using StringBuffer class
+
+</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class Insert {
+            public static void main(String[] args) {
+                // Create a StringBuffer
+                StringBuffer stringBuffer = new StringBuffer("Hello World!");
+        
+                // Insert a string at a specific position
+                stringBuffer.insert(6, "Java ");
+        
+                // Print the modified string
+                System.out.println("Modified String: " + stringBuffer.toString());
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/Strings/7073_string6.png" alt="">    </p>
+<br><br>
+<br><br>
+<b> 7. Program to Add Characters to a String</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class Add{
+            public static void main(String[] args) {
+                // Using concat method
+                String originalString = "Hello";
+                String newString1 = originalString.concat(" World!");
+        
+                // Using + operator
+                String newString2 = originalString + " Java!";
+        
+                // Print the modified strings
+                System.out.println("Original String: " + originalString);
+                System.out.println("Modified String 1: " + newString1);
+                System.out.println("Modified String 2: " + newString2);
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/Strings/7073_string7.png" alt="">   </p>
+<br><br>
+<br><br>
+<b> 8. Program to Add Characters to a String</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        // Program to Add Characters to a String
+
+        class AddCharactersToString {
+            public static void main(String[] args) {
+                // Create a StringBuilder
+                StringBuffer s = new StringBuffer("Hello, ");
+        
+                // Add characters to the string
+                s.append("World");
+        
+                // Print the final string
+                System.out.println(s.toString()); // Output: "Hello, World!"
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Strings/7055string8.png" alt="">   </p>
+<br><br>
+<br><br>
+<b>9 Program to Check Anagram</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Arrays;
+        class AnagramChecker {
+       
+           public static boolean areAnagrams(String str1, String str2) {
+               
+               str1 = str1.replaceAll("\\s", "").toLowerCase();
+               str2 = str2.replaceAll("\\s", "").toLowerCase();
+       
+               
+               if (str1.length() != str2.length()) {
+                   return false;
+               }
+       
+               
+               char[] charArray1 = str1.toCharArray();
+               char[] charArray2 = str2.toCharArray();
+       
+               Arrays.sort(charArray1);
+               Arrays.sort(charArray2);
+       
+               
+               return Arrays.equals(charArray1, charArray2);
+           }
+       
+           public static void main(String[] args) {
+               String str1 = "Listen";
+               String str2 = "Silent";
+       
+               if (areAnagrams(str1, str2)) {
+                   System.out.println(str1 + " and " + str2 + " are anagrams.");
+               } else {
+                   System.out.println(str1 + " and " + str2 + " are not anagrams.");
+               }
+           }
+       }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <pre>Listen and Silent are anagrams</pre> </p>
+<br><br>
+<br><br>
+<b>11. Program to Convert Enum to String</b>
+<br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class A{  
+            public static void main(String args[]){  
+            String s="hello";  
+            char c=s.charAt(4); //print o character
+            System.out.println("1st character is: "+c);  
+            }}  
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3
+    ><br>
+    <p> <PRE>1st character is: o</PRE> </p>
+   
+<br><br>
+<br><br>
+
+<b> 14. Program to count the total number of characters in a string </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class A
+        {    
+            public static void main(String[] args) {    
+                String A = "The best of both worlds";    
+                int count = 0;    
+                    
+                   
+                for(int i = 0; i < A.length(); i++) {    
+                    if(A.charAt(i) != ' ')    
+                        count++;    
+                }    
+                    
+                   
+                System.out.println("Total number of characters in a string: " + count);    
+            }    
+        }     
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <PRE>Total number of characters in a string: 19
+</PRE></p>
+<br><br>
+<br><br><b> 23. Program to find Reverse of the string </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class A
+        {
+          public static void main(String args[])
+          {
+             StringBuffer a = new StringBuffer("ABCDE");
+             System.out.println( "The reverse string--"+a.reverse());
+          }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <PRE>The reverse string--EDCBA</PRE> </p>
+<br><br>
+<br><br>
+<b>29 Program to find the most repeated word in a text file</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.io.BufferedReader;
+        import java.io.FileReader;
+        import java.io.IOException;
+        import java.util.HashMap;
+        import java.util.Map;
+        
+         class String29{
+            public static void main(String[] args) {
+                try {
+                    String filePath = "your_text_file_path.txt"; 
+                    BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        
+                    String line;
+                    StringBuilder content = new StringBuilder();
+        
+                    
+                    while ((line = reader.readLine()) != null) {
+                        content.append(line).append(" ");
+                    }
+        
+                    reader.close();
+        
+                    
+                    String[] words = content.toString().toLowerCase().split("\\s+");
+        
+                    Map < String, Integer &#62; wordCount = new HashMap&#60;&#62;();
+        
+                    for (String word : words) {
+                        
+                        word = word.replaceAll("[^a-zA-Z]", "");
+        
+                        if (!word.isEmpty()) {
+                            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+                        }
+                    }
+        
+                    
+                    String mostRepeatedWord = "";
+                    int maxCount = 0;
+        
+                    for (Map.Entry&#60;String, Integer&#62; entry : wordCount.entrySet()) {
+                        if (entry.getValue() &#62; maxCount) {
+                            maxCount = entry.getValue();
+                            mostRepeatedWord = entry.getKey();
+                        }
+                    }
+        
+                    System.out.println("Most Repeated Word: " + mostRepeatedWord);
+                    System.out.println("Count: " + maxCount);
+        
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    </pre>
+</code>
+
+
+<br>
+<h3>output</h3>
+<br>
+<p>  </p>
+<br><br>
+<br><br>
+<b> 31. Program to Get a Character From the Given String</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+
+        class A { 
+ 
+            public static char
+            getCharFromString(String str, int index) 
+            { 
+                return str.charAt(index); 
+            } 
+        
+            
+            public static void main(String[] args) 
+            { 
+                String str = "ABCDEFGH"; 
+        
+                
+                int index = 5; 
+                char ch = getCharFromString(str, index); 
+        
+                System.out.println("Character from " + str 
+                                + " at index " + index 
+                                + " is " + ch); 
+            } 
+        } 
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <PRE>Character from ABCDEFGH at index 5 is F</PRE> </p>
+<br><br>
+<br><br>
+<b>41. Program to Splitting into a number of sub-strings</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class String41 {
+            public static void main(String[] args) {
+                String originalString = "vishnu";
+                int substringLength = 3;
+        
+                
+                int numSubstrings = (int) Math.ceil((double) originalString.length() / substringLength);
+        
+        
+                for (int i = 0; i < numSubstrings; i++) {
+                    int start = i * substringLength;
+                    int end = Math.min((i + 1) * substringLength, originalString.length());
+        
+                    String substring = originalString.substring(start, end);
+                    System.out.println("Substring " + (i + 1) + ": " + substring);
+                }
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <pre>Substring 1: visSubstring 2: hnu</pre> </p>
+<br><br>
+<b> 47. Write a program to check if two Strings are created with same characters?</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        class A 
+        {
+            static String getString(char x) {
+        String s = String.valueOf(x);
+            return s;
+        }
+        
+        
+        static boolean solve(String s1, String s2) 
+        {	
+            String a = getString(s1.charAt(0)), 
+                b = getString(s2.charAt(0));
+        
+            for (int i = 1; i < s1.length(); i++)
+                if (s1.charAt(i) != s1.charAt(i - 1)) 
+                {
+                    a += getString(s1.charAt(i));
+                }
+        
+            for (int i = 1; i < s2.length(); i++)
+                if (s2.charAt(i) != s2.charAt(i - 1)) 
+                {
+                    b += getString(s2.charAt(i));
+                }
+        
+            if (a.equals(b))
+                return true;
+        
+            return false;
+        }
+        
+        public static void main(String[] args) 
+        {
+            String s1 = "RADHE", s2 = "RADHE";
+            if (solve(s1, s2))
+                System.out.print("Thik ha, chal rha hai");
+            else
+                System.out.print("Thik nhi hai");
+        }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <PRE>Thik ha, chal rha hai</PRE> </p>
+<br><br>
+<br><br>
+
+<br><br>
+<br><br>
+
+<b> 49. Create an object StringBuffer class to reverse the string.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class A {
+            public static void main(String[] args) {
+                StringBuffer sb = new StringBuffer("programming");
+                System.out.println("string: " + sb);
+               
+                System.out.println("reverse: " + sb.reverse());
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p><pre>string: programming
+    reverse: gnimmargorp</pre>  </p>
+<br><br>
+<br><br>
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>

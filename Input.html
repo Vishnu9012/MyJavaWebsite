@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>Input/output</h2></center>
+        <br><br>
+       <br><br>
+<b> 1. Enter the character from user using InputStreamReader</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //Enter the character from user using InputStreamReader
+
+        import java.io.*;  
+        class InputStreamReaderP{  
+        public static void main(String args[])throws Exception{  
+          
+        InputStreamReader r=new InputStreamReader(System.in);  
+        BufferedReader br=new BufferedReader(r);  
+          
+        System.out.println("Enter your name");  
+        String name=br.readLine();  
+        System.out.println("Welcome "+name);  
+         }  
+        }  
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Input Output/7011inputoutput1.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>2. Enter the string from user using BufferedStreamReader</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.io.*;
+
+        class Buffered_Stream
+        {
+          public static void main ( String s[] ) throws IOException
+          {
+            System.out.print ( "Enter the string: " );
+        
+            BufferedReader input = new BufferedReader ( new InputStreamReader ( System.in ) );
+        
+            String inputString = input.readLine();
+        
+          
+        
+            System.out.println ( "Entered string is: " + inputString );
+          }
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Input Output/7083inputoutput2.png" alt="">    </p>
+
+<br><br>
+<br><br>
+<b>3 Enter the integer from user using Scanner class.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //Enter the integer from the user using Scanner class
+        import java.util.Scanner;
+        class A{
+            public static void main(String arg[])
+            {
+                Scanner s = new Scanner(System.in);
+                System.out.println("Enter an integer :-");
+                int a = s.nextInt();
+                System.out.println(a);
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p><img class="P-OUTPUT" src="./javapro/Input Output/7077inputoutput3.png" alt="">    </p>
+
+<br><br>
+<br><br>
+<b>4. Enter the float from user using Scanner class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+
+        class FloatInputExample {
+            public static void main(String[] args) {
+                // Create a Scanner object to read user input
+                Scanner scanner = new Scanner(System.in);
+        
+                System.out.print("Enter a float number: ");
+        
+                // Check if the next token entered by the user is a float
+                if (scanner.hasNextFloat()) {
+                    float userInput = scanner.nextFloat();
+                    System.out.println("You entered: " + userInput);
+                } else {
+                    System.out.println("Invalid input. Please enter a valid float number.");
+                }
+        
+                // Close the Scanner to release resources
+                scanner.close();
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Input Output/7006inputoutput4.png" alt="">  </p>
+<br><br>
+<br><br>
+<b>5. Enter the double from user using Scanner class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+
+        class prog5 {
+           public static void main(String[] args) {
+               // Create a Scanner object to read input from the console
+               Scanner scanner = new Scanner(System.in);
+       
+               // Prompt the user to enter a double
+               System.out.print("Enter a double: ");
+       
+               // Check if the next input is a double
+               if (scanner.hasNextDouble()) {
+                   // Read the double from the user
+                   double userInput = scanner.nextDouble();
+       
+                   // Display the entered double
+                   System.out.println("You entered: " + userInput);
+       
+                   // Check if the entered double is positive, negative, or zero
+                   if (userInput > 0) {
+                       System.out.println("The entered double is positive.");
+                   } else if (userInput < 0) {
+                       System.out.println("The entered double is negative.");
+                   } else {
+                       System.out.println("The entered double is zero.");
+                   }
+               } else {
+                   // If the input is not a double, display an error message
+                   System.out.println("Invalid input. Please enter a valid double.");
+               }
+       
+               // Close the scanner
+               scanner.close();
+           }
+       }
+       
+       
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Input Output/7021inputoutput5.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>6. Enter the boolean from user using Scanner class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.*;  
+        class Boolean {    
+            public static void main(String[] args) {         
+                   System.out.print("Are you above 18?- ");  
+                   Scanner sc = new Scanner(System.in);  
+                   boolean bn = sc.nextBoolean();  
+                   if (bn == true) {  
+                       System.out.println("You are over 18");  
+                   } else if (bn == false) {  
+                       System.out.println("You are under 18");  
+                   }  
+                   sc.close();                      
+             }  
+        }  
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  <img class="P-OUTPUT" src="./javapro/Input Output/7050inputoutput6.png" alt="">   </p>
+<br><br>
+<br><br>
+<b> 7. Enter the short integer from user using Scanner class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;  
+        class a  
+        {  
+        public static void main(String[] x)   
+        {  
+               //object of the Scanner class  
+               Scanner s=new Scanner(System.in);  
+               System.out.print("Enter a short integer value: ");  
+               //invoking nextShort() method that reads an integer input by keyboard  
+               //storing the input number in a variable num  
+               int num = s.nextShort();  
+               System.out.println("The Short integer entered by the user is: "+num);  
+        }  
+        }  
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br> <img class="P-OUTPUT" src="./javapro/Input Output/7039input_output7.png" alt="">  </p>
+<br><br>
+<br><br>
+<b> 8. Enter the long integer from user using Scanner class</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        import java.util.Scanner;
+        //Enter the long integer from user using Scanner class
+        class LongUsingScanner 
+        {
+            public static void main(String[] args) 
+            {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter a long integer : ");
+                long l = sc.nextLong();
+                System.out.println("long integer is : "+l);
+                
+            }
+        
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Input Output/7011inputoutput8.png" alt="">  </p>
+<br><br>
+<br><br>
+<b> 9. Get all characters from the file and display on the screen</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        import java.util.Scanner;
+        //Enter the long integer from user using Scanner class
+        class LongUsingScanner 
+        {
+            public static void main(String[] args) 
+            {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter a long integer : ");
+                long l = sc.nextLong();
+                System.out.println("long integer is : "+l);
+                
+            }
+        
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>   <img class="P-OUTPUT" src="./javapro/Input Output/7011inputoutput8.png" alt=""> </p>
+<br><br>
+<br><br>
+<b>10. Get all characters from the file, count number of lines, words, characters and display on the screen</b>
+<br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.io.BufferedReader;
+        import java.io.FileReader;
+        import java.io.IOException;
+        
+         class prog10 {
+            public static void main(String[] args)  throws ClassNotFoundException{
+                String filePath = "abc.txt"; // Replace with the actual path to your file
+        
+                try{ 
+                    BufferedReader reader = new BufferedReader(new FileReader(filePath));
+                    int character;
+                    int lineCount = 0;
+                    int wordCount = 0;
+                    int charCount = 0;
+                    boolean inWord = false;
+        
+                    while ((character = reader.read()) != -1) {
+                        charCount++;
+        
+                        // Count lines
+                        if (character == '\n') {
+                            lineCount++;
+                        }
+        
+                        // Count words
+                        if (Character.isWhitespace(character)) {
+                            inWord = false;
+                        } else if (!inWord) {
+                            inWord = true;
+                            wordCount++;
+                        }
+                    }
+        
+                    // Display statistics
+                    System.out.println("Number of lines: " + lineCount);
+                    System.out.println("Number of words: " + wordCount);
+                    System.out.println("Number of characters: " + charCount);
+        
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3
+    ><br>
+    <p>  <img class="P-OUTPUT" src="./javapro/Input Output/7089InputOutput10.png" alt="">  </p>
+
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>

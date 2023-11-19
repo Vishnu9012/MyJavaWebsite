@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>PACKAGE</h2></center>
+        <br><br>
+       <br><br>
+<b> 1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Date;
+        class A{
+            public static void main(String a[])
+            {
+                Date obj = new  Date();
+                System.out.println(obj); 
+            }
+        }
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>   <img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""></p>
+
+<br><br>
+<br><br>
+<b>2. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        /* Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.*/
+
+        public class packages2_7024 {
+            public static void main(String[] args) {
+                java.util.Date currentDate = new java.util.Date();
+                System.out.println("Current Date: " + currentDate);
+            }
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Packages/package2.png "alt=""> </p>
+
+<br><br>
+<br><br>
+<b>3. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Date;
+
+        public class CustomDate {
+            private Date date;
+        
+            public CustomDate() {
+                date = new Date();
+            }
+        
+            public Date getCurrentDate() {
+                return date;
+            }
+        
+            public static void main(String[] args) {
+                CustomDate customDate = new CustomDate();
+                Date currentDate = customDate.getCurrentDate();
+        
+                System.out.println("Current Date: " + currentDate);
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""> </p>
+
+<br><br>
+<br><br>
+<b>4. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>class Date {
+        public static void main(String args[]){
+        java.util.Date date=new java.util.Date();  
+        System.out.println(date); 
+        }
+    }
+    
+
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Packages/7086Packages4.png "alt=""> </p>
+<br><br>
+<br><br>
+<b>5. Create a Java program to create a package with multiple default classes.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        package PK1;
+        class Class1 {
+            public void printMessage() {
+                System.out.println("This is the first class in the first package.");
+            }
+            public static void main(String[] args) {
+                new Class1().printMessage();
+            }
+        }
+        
+        
+        
+        class Class2 {
+            public void printMessage() {
+                System.out.println("This is the second class in the second package.");
+            }
+            public static void main(String[] args) {
+                new Class2().printMessage();
+                }
+        }
+        
+        
+        
+        class Class3 {
+            public void printMessage() {
+                System.out.println("This is the third class in the third package.");
+            }
+            public static void main(String[] args) {
+                new Class3().printMessage();
+                }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""> </p>
+
+<br><br>
+<br><br>
+<b>6. Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        MyPackage/Class1.java
+        package MyPackage;
+        
+        public class Class1 {
+            public void function1() {
+                System.out.println("Function 1 from Class1");
+            }
+        }
+        
+         MyPackage/Class2.java
+        package MyPackage;
+        
+        public class Class2 {
+            public void function2() {
+                System.out.println("Function 2 from Class2");
+            }
+        }
+        
+         MyPackage/Class3.java
+        package MyPackage;
+        
+        public class Class3 {
+            public void function3() {
+                System.out.println("Function 3 from Class3");
+            }
+        }
+        
+        MyPackage/Class4.java
+        package MyPackage;
+        
+        public class Class4 {
+            public void function4() {
+                System.out.println("Function 4 from Class4");
+            }
+        }
+        /MainApp.java
+        import MyPackage.Class1;
+        import MyPackage.Class2;
+        import MyPackage.Class3;
+        import MyPackage.Class4;
+        
+        class Packages_6 {
+            public static void main(String[] args) {
+                Class1 obj1 = new Class1();
+                Class2 obj2 = new Class2();
+                Class3 obj3 = new Class3();
+                Class4 obj4 = new Class4();
+        
+                obj1.function1();
+                obj2.function2();
+                obj3.function3();
+                obj4.function4();
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""><img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""> </p>
+<br><br>
+<br><br>
+<b>8. Create a Java program to create a package with public class and protected members to be accessed in another class. </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        MyPackage/MyClass.java
+        package MyPackage;
+        
+        public class MyClass {
+            protected int protectedField;
+        
+            protected void protectedMethod() {
+                System.out.println("Protected method in MyClass");
+            }
+        }
+         MyPackage/MyExtendedClass.java
+        package MyPackage;
+        
+        public class MyExtendedClass extends MyClass {
+            public void accessProtectedMembers() {
+                protectedField = 42;  // Access the protected field
+                protectedMethod();   // Access the protected method
+                System.out.println("Value of protectedField: " + protectedField);
+            }
+        }
+         MainApp.java
+        package MyPackage;
+        
+        class Packages_8 {
+            public static void main(String[] args) {
+                MyExtendedClass extendedObj = new MyExtendedClass();
+                extendedObj.accessProtectedMembers();
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/Packages/package1.png "alt=""> </p>
+<br><br>
+<br><br>
+<b> 9. Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br> </p>
+<br><br>
+<br><br>
+
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>

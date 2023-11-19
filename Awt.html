@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>AWT</h2></center>
+        <br><br>
+    <b>1. Create a simple AWT application that displays a button with FlowLayout manager.
+
+    </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.awt.*;
+        import java.awt.event.*;
+        
+        class a
+        {
+            public static void main(String[] x) 
+            {
+                // Create a new frame.
+                Frame f = new Frame("AWT Button FlowLayout ");
+        
+                // Set the size of the frame.
+                f.setSize(300, 300);
+        
+                // Handle the window closing event.
+                f.addWindowListener(new WindowAdapter() {
+                    public void windowClosing(WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+        
+                // Create a button and add it to the frame.
+                Button b1= new Button("Click me!");
+                f.add(b1);
+        
+                // Create a label and add it to the frame.
+                Label l1 = new Label("You have not clicked the button yet.");
+                f.add(l1);
+        
+                // Set the layout manager for the frame to FlowLayout.
+                f.setLayout(new FlowLayout());
+        
+                // Display the frame.
+                f.setVisible(true);
+            }
+        }
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/AWT/7039AWT1.png" alt=""> </p>
+
+<br><br>
+<br><br>
+<b>2. Create a simple AWT application that displays a button with Custom Layout.</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.awt.*;
+        import java.awt.event.*;
+        
+        class a{
+            public static void main(String[] x) 
+            {
+                // Create a new frame.
+                Frame f = new Frame("AWT Button custom Layout ");
+        
+                // Set the size of the frame.
+                f.setSize(300, 300);
+        
+               
+                // Create a button and add it to the frame.
+                Button b1= new Button("Click me!");
+                
+                // Set the layout manager for the frame tocustom layout.
+                b1.setBounds(150,100,60,60);
+                f.add(b1);
+        
+                // Create a label and add it to the frame.
+                Label l1 = new Label("Please click the button.");
+                f.add(l1);
+        
+              
+                // Display the frame.
+                f.setVisible(true);
+                 // Handle the window closing event.
+                f.addWindowListener(new WindowAdapter() {
+                    public void windowClosing(WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+        
+            }
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p><img class="P-OUTPUT" src="./javapro/AWT/7039AWT2.png" alt=""></p>
+<p>  3. Create a simple AWT application that displays multiple buttons with BorderLayout manager (North, East, West, South, Center).</p>
+
+<br><br>
+<br><br>
+<b></b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>import java.awt.BorderLayout;
+        import java.awt.Button;
+        import java.awt.Frame;
+        
+        class AWTButtonExample {
+            public static void main(String[] args) {
+                Frame frame = new Frame("AWT Button Example");
+        
+               
+                Button northButton = new Button("North");
+                Button eastButton = new Button("East");
+                Button westButton = new Button("West");
+                Button southButton = new Button("South");
+                Button centerButton = new Button("Center");
+        
+               
+                frame.add(northButton, BorderLayout.NORTH);
+                frame.add(eastButton, BorderLayout.EAST);
+                frame.add(westButton, BorderLayout.WEST);
+                frame.add(southButton, BorderLayout.SOUTH);
+                frame.add(centerButton, BorderLayout.CENTER);
+        
+                
+                frame.setSize(400, 300);
+                frame.setVisible(true);
+        
+               
+                frame.addWindowListener(new java.awt.event.WindowAdapter() {
+                    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                        System.exit(0);
+                    }
+                });
+            }
+        }
+        
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/AWT/7029AWT3.png" alt=""> </p>
+
+<br><br>
+<br><br>
+<b>4. Create a simple AWT application that displays a TextField with FlowLayout manager.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //create  a simple AWT application  that displays a TextField with FlowLayout manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.TextField t = new java.awt.TextField("Vipin");
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p><img class="P-OUTPUT" src="./javapro/AWT/7077AWT4.png" alt="">  </p>
+<br><br>
+<br><br>
+<b>5. Create a simple AWT application that displays a TextField with Custom Layout.
+
+</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>//create  a simple AWT application  that displays a TextField with Custom manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.TextField t = new java.awt.TextField("Vipin");
+                f.setLayout(null);
+                t.setBounds(30,100,150,30);
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+        
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/AWT/7077AWT5.png" alt=""> </p>
+
+<br><br>
+<br><br>
+<b>6. Create a simple AWT application that displays a Checkbox with FlowLayout manager.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //Create a simple awt Application that displays a Checkbox with flowLayout Manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.Checkbox t = new java.awt.Checkbox("Vipin");
+               
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/AWT/7077AWT6.png" alt=""> </p>
+<br><br>
+<br><br>
+<b> 7. Create a simple AWT application that displays a Checkbox with Custom Layout.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>//Create a simple awt Application that displays a Checkbox with Custom Manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.Checkbox t = new java.awt.Checkbox("Vipin");
+               f.setLayout(null);
+               t.setBounds(30,100,150,30);
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p> <img class="P-OUTPUT" src="./javapro/AWT/7077AWT7.png" alt=""> </p>
+<br><br>
+<br><br>
+<b>8. Create a simple AWT application that displays a Label with FlowLayout manager. </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //Create a simple awt Application that displays a Label with FlowLayout manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.Label t = new java.awt.Label("Vipin");
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/AWT/7077AWT8.png" alt=""></p>
+<br><br>
+<br><br>
+<b>9. Create a simple AWT application that displays a Label with Custom Layout. </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        //Create a simple awt Application that displays a Label with CustomLayout manager.
+        class awt{
+            public static void main(String[] gfdsafgvsds){
+                java.awt.Frame f = new java.awt.Frame();
+                java.awt.Label t = new java.awt.Label("Vipin");
+               f.setLayout(null);
+               t.setBounds(334,100,150,30);
+                f.setSize(100,200);
+                f.setVisible(true);
+                f.add(t);
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p> <img class="P-OUTPUT" src="./javapro/AWT/7077AWT9.png" alt=""> </p>
+<br><br>
+<br><br>
+
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>

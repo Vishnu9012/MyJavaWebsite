@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>DATA CONVERSION</h2></center>
+        <br><br>
+       <br><br>
+<b> 1. How to convert String to int</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        // How to convert String to int
+        public class StrToInt 
+        {
+            public static void main(String[] args) 
+            {
+                String str = "123";
+                int i=Integer.parseInt(str);
+                System.out.println("String is : "+str);
+                System.out.println("Str Convert to a int: "+ i);
+                System.out.println(1+i);
+                
+            }
+        
+        }
+        
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc1.png" alt="">  </p>
+
+<br><br>
+<br><br>
+<b>2. How to convert int to String</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  </p>
+
+<br><br>
+<br><br>
+<b>3. How to convert String to long</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  </p>
+
+<br><br>
+<br><br>
+
+  <b>4. How to convert long to String</b> 
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  </p>
+<br><br>
+<br><br>
+<b>5. How to convert String to float</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class StringToFloatExample {
+            public static void main(String[] args) {
+                // Example String containing a floating-point number
+                String floatString = "3.14";
+        
+                // Convert String to float using Float.parseFloat()
+                try {
+                    float floatValue = Float.parseFloat(floatString);
+                    System.out.println("Converted float value: " + floatValue);
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Invalid float format in the input string");
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc1.png" alt="">   </p>
+
+<br><br>
+<br><br>
+<b>6. How to convert float to String</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        //How to convert float to String
+        public class FloatToString 
+        {
+            public static void main(String[] args) 
+            {
+                float f = 10.4f;
+                System.out.println(f + 2);
+                String stringValue = "" + f;
+                System.out.println(stringValue + 2);
+            }
+        
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc6.png" alt="">   </p>
+<br><br>
+<br><br>
+<b>7. How to convert String to double</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        package BCA5Practical;
+        //How to convert String to double
+        public class StringToDouble 
+        {
+            public static void main(String[] args) 
+            {
+                String str = "0.5";
+                double D=Double.parseDouble(str);
+                System.out.println("String is "+str);
+                System.out.println("String Converted to an Double "+ D);
+                System.out.println("Showing the String was converted to Double above "+(1+D));
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc17.png" alt="">   </p>
+<br><br>
+<br><br>
+<b> 8. How to convert double to String</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+        class ja{
+        public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a double number: "); 
+        double num = sc.nextDouble();
+        String str = Double.toString(num);
+        System.out.println("Converted String: " + str);   
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc8.png" alt="">   </p>
+<br><br>
+<br><br>
+<b>13. </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class prog13{
+            public static void main(String[] args) {
+                // Convert String to Integer
+                String intStr = "123";
+                int intValue = Integer.parseInt(intStr);
+                System.out.println("Converted Integer: " + intValue);
+        
+                // Convert String to Double
+                String doubleStr = "3.14";
+                double doubleValue = Double.parseDouble(doubleStr);
+                System.out.println("Converted Double: " + doubleValue);
+        
+                // Convert String to Boolean
+                String boolStr = "true";
+                boolean boolValue = Boolean.parseBoolean(boolStr);
+                System.out.println("Converted Boolean: " + boolValue);
+        
+                // Convert String to Custom Object (using Constructor)
+                String customStr = "Hello, World!";
+                CustomObject customObject = new CustomObject(customStr);
+                System.out.println("Converted Custom Object: " + customObject.getData());
+            }
+        
+            // Example Custom Object
+            static class CustomObject {
+                private String data;
+        
+                public CustomObject(String data) {
+                    this.data = data;
+                }
+        
+                public String getData() {
+                    return data;
+                }
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc13.png" alt="">   </p>
+<br><br>
+<br><br>
+<b>10. How to convert Date to String</b>
+<br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Date;
+        import java.text.SimpleDateFormat;
+        class DateToString{
+        public static void main(String a[])
+        {
+        Date date=new Date();
+        System.out.println(date);
+        SimpleDateFormat s=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String str=s.format(date);
+        System.out.println(str);
+        }
+        }
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3
+    ><br>
+    <p>  <img class="P-OUTPUT" src="./javapro/data conversion/dc10.png" alt="">   </p>
+    
+<br><br>
+<b>11</b>
+<br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class A{  
+            public static void main(String args[]){  
+            String s="hello";  
+            char c=s.charAt(4); //print o character
+            System.out.println("1st character is: "+c);  
+            }}  
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3
+    ><br>
+    <p> 1st character is: o </p>
+
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>

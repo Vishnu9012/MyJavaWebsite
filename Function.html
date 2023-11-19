@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Pro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="jstyle.css">
+
+    </head>
+<body>
+    <div class="header">
+        <h1 class="h1">Java Pro</h1>	
+            <div class="container">
+            <form class="search">
+              <input id="search" type="search" placeholder="Search">
+            </form>
+        </div>
+        <script src="single.js"></script>
+    
+
+            
+ 
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="body_content" id="">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="code.html">Basic constructs  -139 </a>
+           
+            <a href="Inheritance.html">Inheritance  -26 </a>
+            <a href="Input.html"> Input/Output  -10 </a>
+            <a href="jdbc.html"> JDBC  -9</a>
+            <a href="Multithreading.html"> Multithreading  - 13</a>
+            <a href="OOPS.HTML">OOPS  - 32  </a>
+            <a href="Package.html">  Package -9 </a>
+            <a href="1-D Array.html">1-D Array  - 23 </a>
+            <a href="String.html"> String - 49 </a>
+            <a href="Interface.html"> Interface - 11 </a>
+            <a href="Awt.html"> GUI  - 9 </a>
+            <a href="Function.html">Function - 13 </a>
+            <a href="exception.html">Exception Handling -7  </a>
+            <a href="Data .html">Data conversin - 11</a>
+            <a href="2-D Array.html">2-D Aarry  - 12</a>
+            <a href="Applets.html"> Applets - 15 </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="contact.html">Contact us</a>
+
+        </div>
+    
+        <!-- The main content of your page goes here -->
+       
+    
+    <section class="2nd-section" id="right-sec">
+        <section id="content">
+            <br>
+            <center><h2>FUNCTION</h2></center>
+        <br><br>
+       <br><br>
+<b>1. Write a Java method to find the smallest number among three numbers </b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        /* Write a java method to find the smallest number amoung three numbers. */
+
+        class function1{
+            public static void main(String[] args) {
+                int num1 = 3;
+                int num2 = 17;
+                int num3 = 5;
+        
+                int smallest = findSmallestNumber(num1, num2, num3);
+        
+                System.out.println("The smallest number is: " + smallest);
+            }
+        
+            public static int findSmallestNumber(int num1, int num2, int num3) {
+                int smallest = num1;
+        
+                if (num2 < smallest) {
+                    smallest = num2;
+                }
+        
+                if (num3 < smallest) {
+                    smallest = num3;
+                }
+        
+                return smallest;
+            }
+        }
+    </pre>
+</code>
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Functions/function1_7024.png"  </p>
+
+<br><br>
+<br><br>
+<b>2. Write a Java method to compute the average of three numbers.</b>
+<br><br>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+
+        class AverageCalculator {
+            static double computeAverage(double num1, double num2, double num3) {
+               return (num1 + num2 + num3) / 3.0;
+           }
+       
+           public static void main(String[] args) {
+               double number1 = 10.0;
+               double number2 = 5.0;
+               double number3 = 8.0;
+       
+               double average = computeAverage(number1, number2, number3);
+       
+               System.out.println("The average is: " + average);
+           }
+       }
+       
+</pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3>
+<br>
+<p>   <img class="P-OUTPUT" src="./javapro/Functions/function2_7100.png" </p>
+
+<br><br>
+<br><br>
+<b>3. Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+
+        //Write a Java method to display the middle character of a string. Note:
+        //aIf the length of the string is odd there will be two middle characters. b) 
+        //If the length of the string is even there will be one middle character.
+        
+          class function3 {
+          public static void main(String[] args)
+            {
+                Scanner in = new Scanner(System.in);
+                System.out.print("Input a string: ");
+                String str = in.nextLine();
+                System.out.print("The middle character in the string: " + middle(str)+"\n");
+            }
+         public static String middle(String str)
+            {
+                int position;
+                int length;
+                if (str.length() % 2 == 0)
+                {
+                    position = str.length() / 2 - 1;
+                    length = 2;
+                }
+                else
+                {
+                    position = str.length() / 2;
+                    length = 1;
+                }
+                return str.substring(position, position + length);
+            }
+        }
+        
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>  <img class="P-OUTPUT" src="./javapro/Functions/function3_7019.png"  </p>
+
+<br><br>
+
+
+<br><br>
+<b>5. Write a Java method to compute the future investment value at a given interest rate for a specified number of years.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        import java.util.Scanner;
+        class FutureInvestment {
+        
+        public static void main(String[] args) {
+           Scanner in = new Scanner(System.in); 
+           System.out.print("Input the investment amount: ");
+            double investment = in.nextDouble();
+            System.out.print("Input the rate of interest: ");
+           double rate = in.nextDouble();
+           System.out.print("Input number of years: ");
+           int year = in.nextInt();
+           
+           rate *= 0.01;
+           
+           System.out.println("Years    FutureValue");
+           for(int i = 1; i <= year; i++) {
+               int formatter = 19;
+               if (i >= 10) formatter = 18;
+               System.out.printf(i + "%"+formatter+".2f\n", futureInvestmentValue(investment, rate/12, i));
+              }
+            }
+        
+        public static double futureInvestmentValue(double investmentAmount, double monthlyInterestRate, int years) {
+               return investmentAmount * Math.pow(1 + monthlyInterestRate, years * 12);
+           }
+       }
+       
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>Output</h3>
+<br>
+<p>  <img class="P-OUTPUT" src="./javapro/Functions/function5_7057.png"  </p>
+
+<br><br>
+<br><br>
+<b>6. Write a Java method to print characters between two characters (i.e. A to P).</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class CharacterPrinter {
+            static void printCharactersBetween(char startChar, char endChar) {
+               if (startChar > endChar) {
+                   char temp = startChar;
+                   startChar = endChar;
+                   endChar = temp;
+               }
+       
+               for (char ch = startChar; ch < endChar; ch++) {
+                   System.out.print(ch + " ");
+               }
+               System.out.println(endChar); 
+           }
+       
+           public static void main(String[] args) {
+               char startChar = 'A';
+               char endChar = 'F';
+       
+               System.out.println("Characters between " + startChar + " and " + endChar + ":");
+               printCharactersBetween(startChar, endChar);
+           }
+       }
+       
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br><p>   <img class="P-OUTPUT" src="./javapro/Functions/Functions6_7100.png" </p>
+<br><br>
+<br><br>
+<b>9. Write a Java method to find all twin prime numbers less than 100.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        class Function9 {
+            public static void main(String[] args) {
+                findTwinPrimes(100);
+            }
+        
+            
+            private static boolean isPrime(int num) {
+                if (num < 2) {
+                    return false;
+                }
+                for (int i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        
+            
+            private static void findTwinPrimes(int limit) {
+                System.out.println("Twin Prime Numbers less than " + limit + ":");
+                for (int i = 3; i < limit; i++) {
+                    if (isPrime(i) && isPrime(i + 2)) {
+                        System.out.println("(" + i + ", " + (i + 2) + ")");
+                    }
+                }
+            }
+        }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br>
+<p> <pre>Twin Prime Numbers less than 100:
+    (3, 5)
+    (5, 7)
+    (11, 13)
+    (17, 19)
+    (29, 31)
+    (41, 43)
+    (59, 61)
+    (71, 73)</pre> </p>
+<br><br>
+<br><br>
+<b> 13. Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</b>
+<br><br>
+<h3>Input</h3>
+<code>
+    <pre>
+        /*
+        * 
+        * Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.
+       */
+       
+       class Test
+       {
+           static boolean isVowel(char c)
+           {
+               if (c == 'a')
+               {
+                   return true;
+               }
+               else if (c == 'a')
+               {
+                   return true;
+               }
+               else if (c == 'u')
+               {
+                   return true;
+               }
+               else if (c == 'e')
+               {
+                   return true;
+               }
+               else if (c == 'i')
+               {
+                   return true;
+               }
+               else if (c == 'o')
+               {
+                   return true;
+               }
+               else
+               {
+                   return false;
+               }
+           }
+       
+           static boolean isStringInsideVowel(String line)
+           {
+               for (int i = 0; i < line.length(); i++)
+               {
+                   if(isVowel(line.charAt(i)))
+                   {
+                       return true;
+                   }
+               }
+               return false;
+           }
+       
+           public static void main(String args[])
+           {
+       
+               System.out.println(Test.isStringInsideVowel("hello"));
+                       System.out.println(Test.isStringInsideVowel("kmnpdk"));
+           }
+       }
+    </pre>
+</code>
+
+<br>
+<br>
+<h3>output</h3><br>
+<p> <pre>true
+    false</pre> </p>
+<br><br>
+<br><br>
+
+
+       <section id="content">
+        
+        
+    </section>  
+</body>
+</html>
